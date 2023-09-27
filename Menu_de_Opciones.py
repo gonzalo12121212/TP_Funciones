@@ -1,6 +1,8 @@
-import Funciones 
+from Funciones import*
  
 def mostrar_menu():
+    """ Muestra un menu personalizado con 11 opciones (una opcion es el exit)
+    """
     
     print("1. Calcular el area de un circulo")
     print("2. Verificar si el numero es par o impar")
@@ -19,7 +21,7 @@ def opcion_1():
     try:
         radio =float(input("Ingresar valor para calcular el area del circulo: "))
         print("")
-        print(f"El valor del area del circulo es: {Funciones.area_de_un_circulo(radio)} ")
+        print(f"El valor del area del circulo es: {area_de_un_circulo(radio)} ")
     except:
         print("Reintente ingresando un valor numerico, porfavor")
     
@@ -28,7 +30,7 @@ def opcion_2():
     try:
         numero = int(input("Ingrese un valor numerico: "))
         print("")
-        print(f"{Funciones.verificar_par_impar(numero)} ")
+        print(f"{verificar_par_impar(numero)} ")
     except:
         print("Reintente ingresando un valor numerico, porfavor")
 
@@ -49,9 +51,9 @@ def opcion_3():
         print("Ingrese un numero digito valido")
 
     lista_numeros.append(numero_ingresado)
-    resultado = Funciones.sumar_elementos(lista_numeros)
+    resultado = sumar_elementos(lista_numeros)
     print("")
-    print(f"La suma de los elementos es: {Funciones.sumar_elementos(lista_numeros)}")
+    print(f"La suma de los elementos es: {sumar_elementos(lista_numeros)}")
 
 def opcion_4 ():
     try:
@@ -59,14 +61,14 @@ def opcion_4 ():
         numero2 = int(input("Ingrese el segundo valor numerico: "))
         numero3 = int(input("Ingrese el tercer valor numerico: "))
         print("")
-        print(f"{Funciones.numero_max(numero1 , numero2 , numero3)} ")
+        print(f"{numero_max(numero1 , numero2 , numero3)} ")
     except:
         print("Reintente ingresando un valor numerico, porfavor")
 
 def opcion_5 ():
     try:
         cadena = input("Ingrese la cadena que desea invertir: ")
-        print(f"Aca esta la cadena invertida:  {Funciones.invertir_cadena(cadena)}")
+        print(f"Aca esta la cadena invertida:  {invertir_cadena(cadena)}")
     except:
         print("Ingrese una cadena de texto valida")
 
@@ -85,16 +87,16 @@ def opcion_6 ():
         print("Ingrese una cadena de texto valida")
 
     palabras_ordenadas.append(palabras_ingresadas)
-    lista_palabras = Funciones.ordenar_lista(palabras_ordenadas)
+    lista_palabras = ordenar_lista(palabras_ordenadas)
     print("")
-    print(f"{Funciones.ordenar_lista(lista_palabras)}")
+    print(f"{ordenar_lista(lista_palabras)}")
 
 def opcion_7 ():
     try:
         base = float(input("Ingrese el valor de base: "))
         exponente = float(input("Ingrese el valor del exponente: "))
         print("")
-        print(f"Aca esta la potencia pedida:  {Funciones.calculo_de_potencia(base, exponente)}")
+        print(f"Aca esta la potencia pedida:  {calculo_de_potencia(base, exponente)}")
     except:
         print("Reintente ingresando un valor numerico, porfavor")    
 
@@ -110,9 +112,9 @@ def opcion_8 ():
                 mas_numeros_pares = int(input("Ingrese el numero que desee: "))
                 lista_num_pares.append(mas_numeros_pares)
         lista_num_pares.append(numeros_pares)
-        lista_pares = Funciones.lista_num_pares(lista_num_pares)
+        lista_pares = lista_num_pares(lista_num_pares)
         print("")
-        print(f"Aca esta la lista con solo numeros pares:  {Funciones.lista_num_pares(lista_pares)}")
+        print(f"Aca esta la lista con solo numeros pares:  {lista_num_pares(lista_pares)}")
     except:
         print("Reintente ingresando un valor numerico, porfavor")
 
@@ -128,7 +130,7 @@ def opcion_9 ():
                 mas_numeros = int(input("Ingrese el numero que desee: "))
                 lista_num_producto.append(mas_numeros)
         lista_num_producto.append(numeros)
-        lista_final = Funciones.lista_producto(lista_num_producto)
+        lista_final = lista_producto(lista_num_producto)
         print("")
         print(f"Aca esta la lista con el producto ya calculado:  {lista_final}")
     except:
@@ -138,9 +140,9 @@ def opcion_10 ():
     try:
         cadena = input("Ingrese la cadena de texto: ")
         print("")
-        print(f"Aca esta la cadena de texto verificada:  {Funciones.cadena_palindromo(cadena)}")
+        print(f"Aca esta la cadena de texto verificada:  {cadena_palindromo(cadena)}")
     except:
-        print("Reintente ingresando una cadena de texto valido, porfavor") 
+        print("Reintente ingresando una cadena de texto valido, porfavor")  
 
 
 
